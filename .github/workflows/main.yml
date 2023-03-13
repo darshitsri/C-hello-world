@@ -12,7 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
+    - name: installing cmake
+      uses: darshitsri/cmake-action@v4
     - name: Configure CMake
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
